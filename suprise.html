@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Surprise for You</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #16002e, #6b123d, #f39c12);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 520px;
+      padding: 42px 28px;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.42);
+      box-shadow: 0 0 35px rgba(255, 215, 100, 0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 22px;
+      padding: 15px 28px;
+      border: none;
+      border-radius: 30px;
+      background: #ffd166;
+      color: #321042;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      background: #fff1a8;
+    }
+
+    #reveal {
+      display: none;
+      margin-top: 28px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .details {
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .artist {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffd166;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div id="mystery">
+      <h1>💌 A Secret Date Awaits...</h1>
+      <p>
+        Decode this clue:
+        <br><br>
+        <strong>Good music + my favorite person + one unforgettable night</strong>
+      </p>
+
+      <button onclick="revealSurprise()">Tap to Reveal Your Surprise ✨</button>
+    </div>
+
+    <div id="reveal">
+      <h1>Surprise, my love! ❤️</h1>
+
+      <div class="details">
+        <div class="artist">Bruno Mars</div>
+        <p>
+          📅 Wednesday, September 2, 2026<br>
+          🕖 7:00 PM<br>
+          📍 Lincoln Financial Field<br>
+          🎟️ Section 204 · Row 9
+        </p>
+
+        <p>
+          Get ready for an incredible night together —
+          and a great view of the show! 🎶
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function revealSurprise() {
+      document.getElementById("mystery").style.display = "none";
+      document.getElementById("reveal").style.display = "block";
+    }
+  </script>
+</body>
+</html>
